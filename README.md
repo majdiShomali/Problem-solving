@@ -16,4 +16,4 @@ Write a program that Reverses a string
 
 ## live code
 
-[live code](t)
+[live code](https://majdishomali.github.io/Problem-solving/)
