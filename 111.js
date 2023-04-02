@@ -1,32 +1,48 @@
 
+
+
+
 console.log("//-----------------Q1-------------------//")
 
-let stackQ1=[];
-let count=0;
-let min=0;
-start0=0;
-function push0(element){
-  stackQ1[count]=element;
-  count++;
-  console.log(`${element} added to ${count}`);
-  if(min==0 && start0==0){
-   min=element;
-   start0=1;
-  }else if(min> element){
-   min=element;
- }
-   return count -1
-}
+class Stack {
 
-push0(400)
-push0(200)
-push0(300)
+  constructor(){
+      this.items = [];
+      this.count = 0;
+      this.min=0;
+      this.start0=0;
+  }
+  
+  // add element to top of the stack
+  push(element) {
+      this.items[this.count] = element;
+      this.count++;
+      console.log(`${element} added to ${this.count}`);
+     if(this.min==0 && this.start0==0){
+      this.min=element;
+      this.start0=1;
+     }else if(this.min> element){
+      this.min=element;
+    }
+      return this.count -1
+  }
+  
+  // print minimum element in stack
+  printMin(){
+    return `${this.min} is the minimum element`;
+  }
+  
+  }
+  
+  const stack =new Stack();
+  stack.push(300);
+  stack.push(200);
+  stack.push(100);
+  stack.push(400);
+  console.log(stack.printMin());
 
-console.log(`${min} is the minimum element`)
 
-
-
-console.log("//-----------------Q2-------------------//")
+  console.log("//-----------------Q2-------------------//")
 
   function reverseQueue(queue) {
     const stack = [];
@@ -114,3 +130,5 @@ class StackQ3 {
 
 
 
+  
+  
